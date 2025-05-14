@@ -6,24 +6,8 @@ Original file is located at
 """
 
 import os
-import subprocess
 import pandas as pd
 from pymongo import MongoClient
-
-# Descargar el dataset utilizando subprocess (si no está previamente descargado)
-def descargar_dataset():
-    if not os.path.exists('covid19-indonesia-time-series-data.zip'):
-        print("Descargando el dataset...")
-        subprocess.run(["kaggle", "datasets", "download", "-d", "meirnizamani/covid19-indonesia-time-series-data"], check=True)
-    else:
-        print("El dataset ya está descargado.")
-    
-    # Descomprimir el archivo ZIP
-    if not os.path.exists('Data_COVID19_Indonesia.csv'):
-        print("Descomprimiendo el archivo...")
-        subprocess.run(["unzip", "covid19-indonesia-time-series-data.zip"], check=True)
-    else:
-        print("El archivo ya está descomprimido.")
 
 # Conexión a MongoDB Atlas
 URI = "mongodb+srv://dilan_291:1012449412Denis$@cluster0.hrhf9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
