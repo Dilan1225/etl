@@ -9,7 +9,7 @@ COPY etl.py .
 COPY requirements.txt .
 
 # Instalar dependencias
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Ejecutar el script ETL al iniciar el contenedor
 CMD ["python", "etl.py"]
