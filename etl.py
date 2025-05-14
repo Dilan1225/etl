@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/10Nsc7LY6Ee322LBBWecXLRoMO0crMsJs
 """
 
-RUN pip install kaggle pymongo pandas
-
 !kaggle datasets download -d meirnizamani/covid19-indonesia-time-series-data # Download the dataset
 !unzip covid19-indonesia-time-series-data.zip # Unzip the downloaded file
 
